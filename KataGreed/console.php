@@ -10,6 +10,7 @@ use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Question\Question;
 use Symfony\Component\Console\SingleCommandApplication;
 use BedrockStreaming\CodingDojo\KataGreed\Greed;
+use BedrockStreaming\CodingDojo\KataGreed\Scoring;
 
 (new SingleCommandApplication())
     ->setName('greed')
@@ -45,7 +46,9 @@ use BedrockStreaming\CodingDojo\KataGreed\Greed;
             $dice = implode(', ', $rollsResult);
             $output->writeln("You rolled $dice.");
 
-            $greed = new Greed();
+            $greed = new Greed(
+                new Scoring\ThreePairsRule(),
+            );
             $score = $greed->score($rollsResult);
 
             $output->writeln("You scored $score!");
