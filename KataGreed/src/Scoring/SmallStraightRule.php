@@ -19,14 +19,7 @@ class SmallStraightRule implements ScoringRule
         $nbOf6 = $diceValuesCounts->getNumberOf6();
 
         if ($nbOfUnique === 4 && ($nbOf1 === 0 || $nbOf6 === 0)) {
-            $remainingDice = array_merge(
-                $diceValuesCounts->getNumberOf1() === 2 ? [1] : [],
-                $diceValuesCounts->getNumberOf2() === 2 ? [2] : [],
-                $diceValuesCounts->getNumberOf3() === 2 ? [3] : [],
-                $diceValuesCounts->getNumberOf4() === 2 ? [4] : [],
-                $diceValuesCounts->getNumberOf5() === 2 ? [5] : [],
-                $diceValuesCounts->getNumberOf6() === 2 ? [6] : [],
-            );
+            $remainingDice = self::getRemainingDice($diceValuesCounts);
 
             return [
                 'score' => 600,
@@ -38,5 +31,20 @@ class SmallStraightRule implements ScoringRule
             'score' => 0,
             'remainingDice' => $diceValuesCounts,
         ];
+    }
+
+    /**
+     * @return array<int, int>
+     */
+    public static function getRemainingDice(DiceValuesCounts $diceValuesCounts): array
+    {
+        return array_merge(
+            $diceValuesCounts->getNumberOf1() === 2 ? [1] : [],
+            $diceValuesCounts->getNumberOf2() === 2 ? [2] : [],
+            $diceValuesCounts->getNumberOf3() === 2 ? [3] : [],
+            $diceValuesCounts->getNumberOf4() === 2 ? [4] : [],
+            $diceValuesCounts->getNumberOf5() === 2 ? [5] : [],
+            $diceValuesCounts->getNumberOf6() === 2 ? [6] : [],
+        );
     }
 }
