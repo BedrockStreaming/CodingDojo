@@ -11,3 +11,6 @@ The `.template` folder contains a list of useful files to use when creating a ne
 When adding a new directory, don't forget to link it below.
 
 # Exercises
+
+# Practice
+When using an exercise, create a dedicated branch with the team name and the date `burton/21-02-2022` to share the code.
