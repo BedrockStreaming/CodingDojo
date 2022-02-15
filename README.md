@@ -1,4 +1,5 @@
 _Inspired by [CodingDojo.org](https://codingdojo.org/)_
+_Many thanks to [vdebes](https://github.com/vdebes) for helping us develop the coding dojo mentality ;)_
 
 # Coding DOJO
 A collection of team exercises to practice coding and share tips.
@@ -13,6 +14,8 @@ When adding a new directory, don't forget to link it below.
 # Exercises
 * [KataGreed](KataGreed/README.md), about naive implementation and refactoring.
 
-
 # Practice
 When using an exercise, create a dedicated branch with the team name and the date `burton/21-02-2022` to share the code.
+
+# Contributing
+Feel free to suggest new exercises by opening pull requests :)
