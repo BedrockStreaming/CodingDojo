@@ -4,8 +4,8 @@ Inspired from [CodingDojo.org](https://codingdojo.org/kata/Greed/)
 ## Workforce
 * Estimated time: 1h45
 * Goal: Refactoring and splitting code into subclasses
-* Alternative: a branch `refacto` exists as base to focus the exercise on the refacto only
-* Solution: a branch `solution/valentin-claras` exists as a solution proposal
+* Alternative: a branch `kata-greed/refacto` exists as base to focus the exercise on the refacto only
+* Solution: a branch `kata-greed/solution-valentin-claras` exists as a solution proposal
 
 ## Rules
 Write a class Greed with a score() method that accepts an array of exactly 6 die values (1 to 6). Scoring rules are based on [the french game 10000](https://fr.wikipedia.org/wiki/10000#Jeu_%C3%A0_6_d%C3%A9s) as follows:
