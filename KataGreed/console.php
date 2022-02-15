@@ -49,6 +49,7 @@ use BedrockStreaming\CodingDojo\KataGreed\Scoring;
             $greed = new Greed(
                 new Scoring\ThreePairsRule(),
                 new Scoring\StraightRule(),
+                new Scoring\SmallStraightRule(),
             );
             $score = $greed->score($rollsResult);
 
