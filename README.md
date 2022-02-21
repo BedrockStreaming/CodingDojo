@@ -19,3 +19,5 @@ When using an exercise, create a dedicated branch with the team name and the dat
 
 # Contributing
 Feel free to suggest new exercises by opening pull requests :)
+
+An exercise should be only about one thing. Make it clear right away, written the goals first (refactoring, working TDD, etc.).
