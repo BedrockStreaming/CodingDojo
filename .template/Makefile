@@ -14,16 +14,16 @@ help: ## This help
 .PHONY: cs
 cs: ## Checks the codestyle
 	$(call printSection,CODE STYLE CHECKING)
-	vendor/bin/phpcs -s
+ 	vendor/bin/php-cs-fixer fix --dry-run --stop-on-violation --diff
 
 .PHONY: cs-fix
 cs-fix: ## Automatically fixes the code style whenever possible
 	$(call printSection,CODE STYLE FIXING)
-	vendor/bin/phpcbf
+	vendor/bin/php-cs-fixer fix
 
 .PHONY: static
 static: ## Runs static analysis
-	$(call printSection,PHP STAN ANALYSIS)
+	$(call printSection,PHP STAN)
 	vendor/bin/phpstan
 
 .PHONY: unit
