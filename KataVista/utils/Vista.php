@@ -75,12 +75,12 @@ class Vista
     /**
      * @return array<int, Description>
      */
-    public function getDescribed(string ...$configurations): array
+    public function getDescribed(string ...$descriptionLetters): array
     {
         return array_values(
             array_filter(
                 $this->descriptions,
-                fn (Description $description): bool => $description->isDescribed(...$configurations)
+                fn (Description $description): bool => $description->isDescribed(...$descriptionLetters)
             )
         );
     }
@@ -88,12 +88,12 @@ class Vista
     /**
      * @return array<int, Description>
      */
-    public function getVisible(string ...$configurations): array
+    public function getVisible(string ...$descriptionLetters): array
     {
         return array_values(
             array_filter(
                 $this->descriptions,
-                fn (Description $description): bool => $description->isAvailableToDescribe(...$configurations)
+                fn (Description $description): bool => $description->isAvailableToDescribe(...$descriptionLetters)
             )
         );
     }

@@ -28,20 +28,20 @@ abstract class AbstractRule implements Description
         return static::NAME;
     }
 
-    public function isDescribed(string ...$configurations): bool
+    public function isDescribed(string ...$descriptionLetters): bool
     {
-        return in_array($this->getLetter(), $configurations);
+        return in_array($this->getLetter(), $descriptionLetters);
     }
 
-    public function isAvailableToDescribe(string ...$configurations): bool
+    public function isAvailableToDescribe(string ...$descriptionLetters): bool
     {
         foreach ($this->getDependencies() as $dependency) {
-            if (!in_array($dependency, $configurations)) {
+            if (!in_array($dependency, $descriptionLetters)) {
                 return false;
             }
         }
 
-        return !$this->isDescribed(...$configurations);
+        return !$this->isDescribed(...$descriptionLetters);
     }
 
     /**

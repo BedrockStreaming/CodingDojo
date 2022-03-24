@@ -8,9 +8,9 @@ interface Description
 
     public function getName(): string;
 
-    public function isDescribed(string ...$configurations): bool;
+    public function isDescribed(string ...$descriptionLetters): bool;
 
-    public function isAvailableToDescribe(string ...$configurations): bool;
+    public function isAvailableToDescribe(string ...$descriptionLetters): bool;
 
     public function getDescription(): string;
 }
