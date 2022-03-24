@@ -17,7 +17,7 @@ class BackgroundTest extends TestCase
 
         self::assertSame(
             $background->describe(),
-            'In the background, on the left, I could see a land spot and a land spot , in front of me there was a land spot and on the right I could look at a land spot and a land spot .',
+            'In the background, I could see a land spot and a land spot on the left, there was a land spot in front of me, and I could look at a land spot and a land spot on the right.',
         );
     }
 }

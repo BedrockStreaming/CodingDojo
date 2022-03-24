@@ -9,25 +9,25 @@ class PainterTest extends TestCase
 {
     public function testVistaConfiguration(): void
     {
-        $painter = new Painter();
-
-        self::assertMatchesRegularExpression(
-            $this->buildRegularExpression(),
-            $painter->captureVista()->describe()
-        );
+        $this->testVistaContainsPlacedLandmarks();
     }
 
     public function testVistaContainsAMeadow(): void
     {
+        $this->testVistaContainsOneLandmark('meadow');
+    }
+
+    private function testVistaContainsOneLandmark(string $element): void
+    {
         $painter = new Painter();
 
         self::assertMatchesRegularExpression(
-            '#.*.meadow*#',
+            '#.*'.$element.'.*#',
             $painter->captureVista()->describe()
         );
     }
 
-    private function buildRegularExpression(
+    private function testVistaContainsPlacedLandmarks(
         string $f1 = '(?:.+)',
         string $f2 = '(?:.+)',
         string $f3 = '(?:.+)',
@@ -40,15 +40,17 @@ class PainterTest extends TestCase
         string $b3 = '(?:.+)',
         string $b4 = '(?:.+)',
         string $b5 = '(?:.+)'
-    ): string {
+    ): void {
+        $painter = new Painter();
+
         $matches = [
             '(?:At first sight there was )',
             $f1,
-            '(?: , )',
+            '(?: on the left, )',
             $f2,
-            '(?: and )',
+            '(?: in the middle, and )',
             $f3,
-            "(?: \.)",
+            "(?: on the right\.)",
             '\n',
             '(?:Next, came )',
             $m1,
@@ -60,19 +62,22 @@ class PainterTest extends TestCase
             $m4,
             "(?: on the right\.)",
             '\n',
-            '(?:In the background, on the left, I could see )',
+            '(?:In the background, I could see )',
             $b1,
             '(?: and )',
             $b2,
-            '(?: , in front of me there was )',
+            '(?: on the left, there was )',
             $b3,
-            '(?: and on the right I could look at )',
+            '(?: in front of me, and I could look at )',
             $b4,
             '(?: and )',
             $b5,
-            "(?: \.)",
+            "(?: on the right\.)",
         ];
 
-        return '#^'.implode('', $matches).'$#';
+        self::assertMatchesRegularExpression(
+            '#^'.implode('', $matches).'$#',
+            $painter->captureVista()->describe()
+        );
     }
 }

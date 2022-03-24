@@ -17,7 +17,7 @@ class ForegroundTest extends TestCase
 
         self::assertSame(
             $foreground->describe(),
-            'At first sight there was a land spot , a land spot and a land spot .',
+            'At first sight there was a land spot on the left, a land spot in the middle, and a land spot on the right.',
         );
     }
 }

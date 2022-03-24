@@ -27,11 +27,11 @@ class Foreground
             [
                 'At first sight there was',
                 $this->leftLandmark->describe(),
-                ',',
+                'on the left,',
                 $this->centralLandmark->describe(),
-                'and',
+                'in the middle, and',
                 $this->rightLandmark->describe(),
-                '.',
+                'on the right.',
             ]
         );
     }

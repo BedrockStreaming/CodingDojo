@@ -31,17 +31,17 @@ class Background
         return implode(
             ' ',
             [
-                'In the background, on the left, I could see',
+                'In the background, I could see',
                 $this->leftmostLandmark->describe(),
                 'and',
                 $this->leftLandmark->describe(),
-                ', in front of me there was',
+                'on the left, there was',
                 $this->centralLandmark->describe(),
-                'and on the right I could look at',
+                'in front of me, and I could look at',
                 $this->rightLandmark->describe(),
                 'and',
                 $this->rightmostLandmark->describe(),
-                '.',
+                'on the right.',
             ]
         );
     }
