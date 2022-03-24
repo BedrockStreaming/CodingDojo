@@ -17,17 +17,12 @@ class PainterTest extends TestCase
         );
     }
 
-    /**
-     * @todo remove this test once the kata is started
-     */
-    public function testVistaIsFoggyByDefault(): void
+    public function testVistaContainsAMeadow(): void
     {
         $painter = new Painter();
 
-        $fogMatcher = '(?:fog)';
-
         self::assertMatchesRegularExpression(
-            $this->buildRegularExpression($fogMatcher, $fogMatcher, $fogMatcher, $fogMatcher, $fogMatcher, $fogMatcher, $fogMatcher, $fogMatcher, $fogMatcher, $fogMatcher, $fogMatcher, $fogMatcher),
+            '#.*.meadow*#',
             $painter->captureVista()->describe()
         );
     }
