@@ -5,7 +5,7 @@ namespace BedrockStreamingUtils\CodingDojo\KataVista\Description;
 class Field extends AbstractRule
 {
     public const LETTER = 'f';
-    public const NAME = 'field';
+    public const NAME = 'fields';
 
     /**
      * @return array<int, string>
@@ -17,6 +17,6 @@ class Field extends AbstractRule
 
     public function getDescription(): string
     {
-        return 'There are "fields" at first sight.';
+        return 'There are <landmark>'.Field::NAME.'</> at first sight.';
     }
 }

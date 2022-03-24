@@ -17,6 +17,6 @@ class Ocean extends AbstractRule
 
     public function getDescription(): string
     {
-        return 'There is an "ocean" in the background.';
+        return 'There is an <landmark>'.Ocean::NAME.'</> in the <position>background</>.';
     }
 }

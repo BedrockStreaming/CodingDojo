@@ -8,14 +8,24 @@ abstract class AbstractRule implements Description
 {
     // Overwritten in child classes.
     public const LETTER = '';
+    public const NAME = '';
 
     public function getLetter(): string
     {
         if (static::LETTER === '') {
-            throw new \LogicException('A letter must be defined in each rule, none defined in "'.static::class.'".');
+            throw new \LogicException('A letter must be defined in each description, none defined in "'.static::class.'".');
         }
 
         return static::LETTER;
+    }
+
+    public function getName(): string
+    {
+        if (static::NAME === '') {
+            throw new \LogicException('A name must be defined in each description, none defined in "'.static::class.'".');
+        }
+
+        return static::NAME;
     }
 
     public function isDescribed(string ...$configurations): bool

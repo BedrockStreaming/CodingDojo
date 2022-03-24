@@ -17,6 +17,6 @@ class Swamp extends AbstractRule
 
     public function getDescription(): string
     {
-        return 'There is a "swamp" between the "mountain" and the "ocean".';
+        return 'There is a <landmark>'.Swamp::NAME.'</> between the <landmark>'.Mountain::NAME.'</> and the <landmark>'.Ocean::NAME.'</>.';
     }
 }

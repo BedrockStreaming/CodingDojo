@@ -17,6 +17,6 @@ class Mountain extends AbstractRule
 
     public function getDescription(): string
     {
-        return 'There are "mountain" in the background.';
+        return 'There are <landmark>'.Mountain::NAME.'</> in the <position>background</>.';
     }
 }

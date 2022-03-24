@@ -17,6 +17,6 @@ class FieldBarley extends AbstractRule
 
     public function getDescription(): string
     {
-        return 'There is "barley" in the rightmost "field".';
+        return 'There is <landmark>'.FieldBarley::NAME.'</> in the <position>right</>most <landmark>'.Field::NAME.'</>.';
     }
 }

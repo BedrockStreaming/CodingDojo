@@ -17,6 +17,6 @@ class Cows extends AbstractRule
 
     public function getDescription(): string
     {
-        return 'The "cattle" is mostly "cows".';
+        return 'The <landmark>'.Cattle::NAME.'</> is mostly <landmark>'.Cows::NAME.'</>.';
     }
 }

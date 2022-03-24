@@ -17,6 +17,6 @@ class Road5 extends AbstractRule
 
     public function getDescription(): string
     {
-        return 'The "road" through the meadow forks into a "pathway" to the "abbey".';
+        return 'The <landmark>'.Road2::NAME.'</> through the meadow forks into a <landmark>'.Road5::NAME.'</> to the <landmark>'.Abbey::NAME.'</>.';
     }
 }

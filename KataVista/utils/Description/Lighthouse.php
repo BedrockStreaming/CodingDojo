@@ -17,6 +17,6 @@ class Lighthouse extends AbstractRule
 
     public function getDescription(): string
     {
-        return 'There is a "lighthouse" in the background of the "village", dominating the "ocean".';
+        return 'There is a <landmark>'.Lighthouse::NAME.'</> in the <position>background</> of the <landmark>'.Village::NAME.'</>, dominating the <landmark>'.Ocean::NAME.'</>.';
     }
 }

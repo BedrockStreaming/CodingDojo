@@ -17,6 +17,6 @@ class Ship extends AbstractRule
 
     public function getDescription(): string
     {
-        return 'There is a "ship" leaving the "ocean" to the right.';
+        return 'There is a <landmark>'.Ship::NAME.'</> leaving the <landmark>'.Ocean::NAME.'</> to the <position>right</>.';
     }
 }

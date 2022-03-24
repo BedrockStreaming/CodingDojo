@@ -17,6 +17,6 @@ class Forest extends AbstractRule
 
     public function getDescription(): string
     {
-        return 'There is a "forest" on the left.';
+        return 'There is a <landmark>'.Forest::NAME.'</> on the <position>left</>.';
     }
 }

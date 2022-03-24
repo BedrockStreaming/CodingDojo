@@ -17,6 +17,6 @@ class SnowyMountains extends AbstractRule
 
     public function getDescription(): string
     {
-        return 'The leftmost "mountain" is covered in "snow".';
+        return 'The <position>left</>most <landmark>'.Mountain::NAME.'</> is covered in <landmark>'.SnowyMountains::NAME.'</>.';
     }
 }

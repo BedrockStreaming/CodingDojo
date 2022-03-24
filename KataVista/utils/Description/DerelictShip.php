@@ -17,6 +17,6 @@ class DerelictShip extends AbstractRule
 
     public function getDescription(): string
     {
-        return 'There is a "derelict ship" in the "swamp".';
+        return 'There is a <landmark>derelict ship</> in the <landmark>'.Swamp::NAME.'</>.';
     }
 }

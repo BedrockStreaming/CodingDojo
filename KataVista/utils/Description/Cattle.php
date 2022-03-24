@@ -17,6 +17,6 @@ class Cattle extends AbstractRule
 
     public function getDescription(): string
     {
-        return 'There are "cattle" on the right.';
+        return 'There are <landmark>'.Cattle::NAME.'</> on the <position>right</>.';
     }
 }

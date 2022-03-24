@@ -17,6 +17,6 @@ class Meadow extends AbstractRule
 
     public function getDescription(): string
     {
-        return 'There is a "meadow".';
+        return 'There is a <landmark>'.Meadow::NAME.'</>.';
     }
 }

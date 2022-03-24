@@ -17,6 +17,6 @@ class Road1 extends AbstractRule
 
     public function getDescription(): string
     {
-        return 'There is a "path" going from the "windmill" to the "village".';
+        return 'There is a <landmark>'.Road1::NAME.'</> going from the <landmark>'.Windmill::NAME.'</> to the <landmark>'.Village::NAME.'</>.';
     }
 }

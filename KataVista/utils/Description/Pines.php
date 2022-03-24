@@ -17,6 +17,6 @@ class Pines extends AbstractRule
 
     public function getDescription(): string
     {
-        return 'The "forest" is made of "pines".';
+        return 'The <landmark>'.Forest::NAME.'</> is made of <landmark>'.Pines::NAME.'</>.';
     }
 }

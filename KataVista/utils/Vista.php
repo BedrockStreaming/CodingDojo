@@ -30,12 +30,12 @@ use BedrockStreamingUtils\CodingDojo\KataVista\Description\Windmill;
 class Vista
 {
     /** @var array<string, Description> */
-    private array $rules = [];
+    private array $descriptions = [];
 
     public function __construct()
     {
-        /** @var array<int, Description> $rules */
-        $rules = [
+        /** @var array<int, Description> $descriptions */
+        $descriptions = [
             new Field(),
             new FieldWheat(),
             new FieldBarley(),
@@ -62,13 +62,13 @@ class Vista
             new Road5(),
         ];
 
-        foreach ($rules as $rule) {
-            $letter = $rule->getLetter();
-            if (array_key_exists($letter, $this->rules)) {
-                throw new \InvalidArgumentException('Letter "'.$letter.'" is already used by class "'.get_class($this->rules[$letter]).'", cannot be used by "'.get_class($rule).'".');
+        foreach ($descriptions as $description) {
+            $letter = $description->getLetter();
+            if (array_key_exists($letter, $this->descriptions)) {
+                throw new \InvalidArgumentException('Letter "'.$letter.'" is already used by class "'.get_class($this->descriptions[$letter]).'", cannot be used by "'.get_class($description).'".');
             }
 
-            $this->rules[$letter] = $rule;
+            $this->descriptions[$letter] = $description;
         }
     }
 
@@ -79,8 +79,8 @@ class Vista
     {
         return array_values(
             array_filter(
-                $this->rules,
-                fn (Description $rule): bool => $rule->isDescribed(...$configurations)
+                $this->descriptions,
+                fn (Description $description): bool => $description->isDescribed(...$configurations)
             )
         );
     }
@@ -92,8 +92,8 @@ class Vista
     {
         return array_values(
             array_filter(
-                $this->rules,
-                fn (Description $rule): bool => $rule->isAvailableToDescribe(...$configurations)
+                $this->descriptions,
+                fn (Description $description): bool => $description->isAvailableToDescribe(...$configurations)
             )
         );
     }

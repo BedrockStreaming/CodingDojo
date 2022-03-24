@@ -17,6 +17,6 @@ class Road3 extends AbstractRule
 
     public function getDescription(): string
     {
-        return 'There is a "croassroad" in the middle of the "meadow".';
+        return 'There is a <landmark>'.Road3::NAME.'</> in the middle of the <landmark>'.Meadow::NAME.'</>.';
     }
 }

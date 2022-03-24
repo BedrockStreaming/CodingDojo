@@ -4,6 +4,7 @@ namespace BedrockStreamingUtils\CodingDojo\KataVista;
 
 use BedrockStreamingUtils\CodingDojo\KataVista\Description\Meadow;
 use Symfony\Component\Console\Command\Command;
+use Symfony\Component\Console\Formatter\OutputFormatterStyle;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
@@ -22,6 +23,8 @@ class KataCommand extends Command
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $io = new SymfonyStyle($input, $output);
+        $io->getFormatter()->setStyle('landmark', new OutputFormatterStyle('yellow', null, ['underscore']));
+        $io->getFormatter()->setStyle('position', new OutputFormatterStyle('magenta', null, []));
 
         $rules = new Vista();
 

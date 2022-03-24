@@ -17,6 +17,6 @@ class Tower extends AbstractRule
 
     public function getDescription(): string
     {
-        return 'There is a "tower" on the rightmost "mountain".';
+        return 'There is a <landmark>'.Tower::NAME.'</> on the <position>right</>most <landmark>'.Mountain::NAME.'</>.';
     }
 }

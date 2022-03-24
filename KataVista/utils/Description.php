@@ -6,6 +6,8 @@ interface Description
 {
     public function getLetter(): string;
 
+    public function getName(): string;
+
     public function isDescribed(string ...$configurations): bool;
 
     public function isAvailableToDescribe(string ...$configurations): bool;

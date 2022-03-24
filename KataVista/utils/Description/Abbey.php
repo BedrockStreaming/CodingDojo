@@ -17,6 +17,6 @@ class Abbey extends AbstractRule
 
     public function getDescription(): string
     {
-        return 'There is an "abbey" in the "meadow" between the "forest" and the "village".';
+        return 'There is an <landmark>'.Abbey::NAME.'</> in the <landmark>'.Meadow::NAME.'</> between the <landmark>'.Forest::NAME.'</> and the <landmark>'.Village::NAME.'</>.';
     }
 }

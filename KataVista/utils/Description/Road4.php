@@ -17,6 +17,6 @@ class Road4 extends AbstractRule
 
     public function getDescription(): string
     {
-        return 'There is a "trail" from the "meadow" to the "tower".';
+        return 'There is a <landmark>'.Road4::NAME.'</> from the <landmark>'.Meadow::NAME.'</> to the <landmark>'.Tower::NAME.'</>.';
     }
 }
