@@ -9,11 +9,11 @@ class PainterTest extends TestCase
 {
     public function testVistaConfiguration(): void
     {
-        $camera = new Painter();
+        $painter = new Painter();
 
         self::assertMatchesRegularExpression(
             $this->buildRegularExpression(),
-            $camera->captureVista()->describe()
+            $painter->captureVista()->describe()
         );
     }
 
@@ -22,13 +22,13 @@ class PainterTest extends TestCase
      */
     public function testVistaIsFoggyByDefault(): void
     {
-        $camera = new Painter();
+        $painter = new Painter();
 
         $fogMatcher = '(?:fog)';
 
         self::assertMatchesRegularExpression(
             $this->buildRegularExpression($fogMatcher, $fogMatcher, $fogMatcher, $fogMatcher, $fogMatcher, $fogMatcher, $fogMatcher, $fogMatcher, $fogMatcher, $fogMatcher, $fogMatcher, $fogMatcher),
-            $camera->captureVista()->describe()
+            $painter->captureVista()->describe()
         );
     }
 

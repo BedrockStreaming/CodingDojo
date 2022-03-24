@@ -20,9 +20,9 @@ class PaintCommand extends Command
     {
         $io = new SymfonyStyle($input, $output);
 
-        $camera = new Painter();
+        $painter = new Painter();
 
-        $io->block($camera->captureVista()->describe());
+        $io->block($painter->captureVista()->describe());
 
         return 0;
     }
