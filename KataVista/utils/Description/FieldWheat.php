@@ -17,6 +17,6 @@ class FieldWheat extends AbstractRule
 
     public function getDescription(): string
     {
-        return 'The <postion>left</>most <landmark>'.Field::NAME.'</> is a <landmark>'.FieldWheat::NAME.'</> field.';
+        return 'The <position>left</>most <landmark>'.Field::NAME.'</> is a <landmark>'.FieldWheat::NAME.'</> field.';
     }
 }

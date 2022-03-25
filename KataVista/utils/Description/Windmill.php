@@ -17,6 +17,6 @@ class Windmill extends AbstractRule
 
     public function getDescription(): string
     {
-        return 'There is a <landmark>'.Windmill::NAME.'</> in the middle of the <landmark>'.Field::NAME.'</>.';
+        return 'There is a <landmark>'.Windmill::NAME.'</> in the <position>middle</> of the <landmark>'.Field::NAME.'</>.';
     }
 }
