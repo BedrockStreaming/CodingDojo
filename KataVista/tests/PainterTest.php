@@ -58,12 +58,105 @@ class PainterTest extends TestCase
 
     // Helper functions.
 
-    private function testVistaContainsOneLandmark(string $element): void
+    private function testVistaContainsOneLandmark(string $landmark): void
     {
         $painter = new Painter();
 
         self::assertMatchesRegularExpression(
-            '#.*'.$element.'.*#',
+            '#.*'.$landmark.'.*#',
+            $painter->captureVista()->describe()
+        );
+    }
+
+    private function testVistaContainsLandmarkInTheForeground(string $landmark): void
+    {
+        $painter = new Painter();
+
+        $matches = [
+            '(?:At first sight there was )',
+            '(?:.+)?',
+            $landmark,
+            '(?:.+)?',
+            '\n',
+            '.*',
+            '\n',
+            '.*',
+        ];
+
+        self::assertMatchesRegularExpression(
+            '#^'.implode('', $matches).'$#',
+            $painter->captureVista()->describe()
+        );
+    }
+
+    private function testVistaContainsLandmarkInTheMiddleground(string $landmark): void
+    {
+        $painter = new Painter();
+
+        $matches = [
+            '.*',
+            '\n',
+            '(?:Next, came )',
+            '(?:.+)?',
+            $landmark,
+            '(?:.+)?',
+            '\n',
+            '.*',
+        ];
+
+        self::assertMatchesRegularExpression(
+            '#^'.implode('', $matches).'$#',
+            $painter->captureVista()->describe()
+        );
+    }
+
+    private function testVistaContainsLandmarkInTheBackground(string $landmark): void
+    {
+        $painter = new Painter();
+
+        $matches = [
+            '.*',
+            '\n',
+            '.*',
+            '\n',
+            '(?:In the background, I could see )',
+            '(?:.+)?',
+            $landmark,
+            '(?:.+)?',
+        ];
+
+        self::assertMatchesRegularExpression(
+            '#^'.implode('', $matches).'$#',
+            $painter->captureVista()->describe()
+        );
+    }
+
+    private function testVistaContainsLandmarkOnTheLeft(string $landmark): void
+    {
+        $painter = new Painter();
+
+        self::assertMatchesRegularExpression(
+            '#'.$landmark.' (?:and .*)?on the left,#',
+            $painter->captureVista()->describe()
+        );
+    }
+
+    private function testVistaContainsLandmarkInTheCenter(string $landmark): void
+    {
+        $painter = new Painter();
+
+        self::assertMatchesRegularExpression(
+            '#'.$landmark.' (?:in the middle,|in front of me)#',
+            $painter->captureVista()->describe()
+        );
+    }
+
+    private function testVistaContainsLandmarkOnTheRight(string $landmark): void
+    {
+        $painter = new Painter();
+
+        self::assertMatchesRegularExpression(
+            '#left, .*'.$landmark.' (?:and .*)?on the right.#',
             $painter->captureVista()->describe()
         );
     }
