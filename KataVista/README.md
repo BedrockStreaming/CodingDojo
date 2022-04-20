@@ -24,7 +24,7 @@ Note that the *spectator* can talk freely with the driver. This kata is intended
 ### Kickstart
 _Randomly set a driver and a pilot for the first step._
 
-You will have to add tests to the `PainterTest` class, then update the `Painter` class so description of the painting match elements that are described.
+You will have to add one test to the `PainterTest` class to check the new rule, then update the `Painter` class so the description of the painting match elements that are described.
 The painting is composed of 3 landmarks at foreground, 4 landmarks at the middleground, and 5 landmarks in the background.
 
 First, the driver should execute the command `./console.php vista:describe`.
