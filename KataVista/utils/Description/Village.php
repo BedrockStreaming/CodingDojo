@@ -17,6 +17,6 @@ class Village extends AbstractRule
 
     public function getDescription(): string
     {
-        return 'There is a <landmark>'.Village::NAME.'</> next to the <landmark>'.Meadow::NAME.'</>.';
+        return 'There is a <landmark>'.Village::NAME.'</> on the <position>right</position> of the <landmark>'.Meadow::NAME.'</>.';
     }
 }
