@@ -53,12 +53,12 @@ class PainterTest extends TestCase
 
     public function testVistaContainsAMeadow(): void
     {
-        $this->testVistaContainsOneLandmark('meadow');
+        $this->helperVistaContainsOneLandmark('meadow');
     }
 
-    // Helper functions.
+    // Helper functions below.
 
-    private function testVistaContainsOneLandmark(string $landmark): void
+    private function helperVistaContainsOneLandmark(string $landmark): void
     {
         $painter = new Painter();
 
@@ -68,7 +68,7 @@ class PainterTest extends TestCase
         );
     }
 
-    private function testVistaContainsLandmarkInTheForeground(string $landmark): void
+    private function helperVistaContainsLandmarkInTheForeground(string $landmark): void
     {
         $painter = new Painter();
 
@@ -89,7 +89,7 @@ class PainterTest extends TestCase
         );
     }
 
-    private function testVistaContainsLandmarkInTheMiddleground(string $landmark): void
+    private function helperVistaContainsLandmarkInTheMiddleground(string $landmark): void
     {
         $painter = new Painter();
 
@@ -110,7 +110,7 @@ class PainterTest extends TestCase
         );
     }
 
-    private function testVistaContainsLandmarkInTheBackground(string $landmark): void
+    private function helperVistaContainsLandmarkInTheBackground(string $landmark): void
     {
         $painter = new Painter();
 
@@ -131,7 +131,7 @@ class PainterTest extends TestCase
         );
     }
 
-    private function testVistaContainsLandmarkOnTheLeft(string $landmark): void
+    private function helperVistaContainsLandmarkOnTheLeft(string $landmark): void
     {
         $painter = new Painter();
 
@@ -141,7 +141,7 @@ class PainterTest extends TestCase
         );
     }
 
-    private function testVistaContainsLandmarkInTheCenter(string $landmark): void
+    private function helperVistaContainsLandmarkInTheCenter(string $landmark): void
     {
         $painter = new Painter();
 
@@ -151,7 +151,7 @@ class PainterTest extends TestCase
         );
     }
 
-    private function testVistaContainsLandmarkOnTheRight(string $landmark): void
+    private function helperVistaContainsLandmarkOnTheRight(string $landmark): void
     {
         $painter = new Painter();
 
