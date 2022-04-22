@@ -16,7 +16,7 @@
     "sort-packages": true
   },
   "require": {
-    "php": "^7.4",
+    "php": "^7.4|^8.0",
     "myclabs/php-enum": "^1.8",
     "symfony/console": "^5.4"
   },
