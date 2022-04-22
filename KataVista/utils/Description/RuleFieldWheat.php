@@ -2,7 +2,7 @@
 
 namespace BedrockStreamingUtils\CodingDojo\KataVista\Description;
 
-class FieldWheat extends AbstractRule
+class RuleFieldWheat extends AbstractRule
 {
     public const LETTER = 'w';
     public const NAME = 'wheat';
@@ -12,11 +12,11 @@ class FieldWheat extends AbstractRule
      */
     protected function getDependencies(): array
     {
-        return [Field::LETTER];
+        return [RuleField::LETTER];
     }
 
     public function getDescription(): string
     {
-        return 'The <position>left</>most <landmark>'.Field::NAME.'</> is a <landmark>'.FieldWheat::NAME.'</> field.';
+        return 'The <position>left</>most <landmark>'.RuleField::NAME.'</> is a <landmark>'.RuleFieldWheat::NAME.'</> field.';
     }
 }

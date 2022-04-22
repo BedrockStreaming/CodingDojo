@@ -2,7 +2,7 @@
 
 namespace BedrockStreamingUtils\CodingDojo\KataVista\Description;
 
-class Swamp extends AbstractRule
+class RuleSwamp extends AbstractRule
 {
     public const LETTER = 's';
     public const NAME = 'swamp';
@@ -12,11 +12,11 @@ class Swamp extends AbstractRule
      */
     protected function getDependencies(): array
     {
-        return [Mountain::LETTER, Ocean::LETTER];
+        return [RuleMountain::LETTER, RuleOcean::LETTER];
     }
 
     public function getDescription(): string
     {
-        return 'There is a <landmark>'.Swamp::NAME.'</> between the <landmark>'.Mountain::NAME.'</> and the <landmark>'.Ocean::NAME.'</>.';
+        return 'There is a <landmark>'.RuleSwamp::NAME.'</> between the <landmark>'.RuleMountain::NAME.'</> and the <landmark>'.RuleOcean::NAME.'</>.';
     }
 }

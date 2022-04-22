@@ -2,21 +2,21 @@
 
 namespace BedrockStreamingUtils\CodingDojo\KataVista\Description;
 
-class DerelictShip extends AbstractRule
+class RuleCattle extends AbstractRule
 {
-    public const LETTER = 'd';
-    public const NAME = 'derelict ship';
+    public const LETTER = 'c';
+    public const NAME = 'cattle';
 
     /**
      * @return array<int, string>
      */
     protected function getDependencies(): array
     {
-        return [Swamp::LETTER];
+        return [];
     }
 
     public function getDescription(): string
     {
-        return 'There is a <landmark>derelict ship</> in the <landmark>'.Swamp::NAME.'</>.';
+        return 'There are <landmark>'.RuleCattle::NAME.'</> on the <position>right</>.';
     }
 }

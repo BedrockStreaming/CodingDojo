@@ -2,7 +2,7 @@
 
 namespace BedrockStreamingUtils\CodingDojo\KataVista\Description;
 
-class Lighthouse extends AbstractRule
+class RuleLighthouse extends AbstractRule
 {
     public const LETTER = 'H';
     public const NAME = 'lighthouse';
@@ -12,11 +12,11 @@ class Lighthouse extends AbstractRule
      */
     protected function getDependencies(): array
     {
-        return [Ocean::LETTER, Village::LETTER];
+        return [RuleOcean::LETTER, RuleVillage::LETTER];
     }
 
     public function getDescription(): string
     {
-        return 'There is a <landmark>'.Lighthouse::NAME.'</> in the <position>background</> of the <landmark>'.Village::NAME.'</>, dominating the <landmark>'.Ocean::NAME.'</>.';
+        return 'There is a <landmark>'.RuleLighthouse::NAME.'</> in the <position>background</> of the <landmark>'.RuleVillage::NAME.'</>, dominating the <landmark>'.RuleOcean::NAME.'</>.';
     }
 }

@@ -2,10 +2,10 @@
 
 namespace BedrockStreamingUtils\CodingDojo\KataVista\Description;
 
-class Cattle extends AbstractRule
+class RuleMeadow extends AbstractRule
 {
-    public const LETTER = 'c';
-    public const NAME = 'cattle';
+    public const LETTER = 'm';
+    public const NAME = 'meadow';
 
     /**
      * @return array<int, string>
@@ -17,6 +17,6 @@ class Cattle extends AbstractRule
 
     public function getDescription(): string
     {
-        return 'There are <landmark>'.Cattle::NAME.'</> on the <position>right</>.';
+        return 'There is a <landmark>'.RuleMeadow::NAME.'</>.';
     }
 }

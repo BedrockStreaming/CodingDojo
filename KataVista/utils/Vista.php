@@ -2,30 +2,30 @@
 
 namespace BedrockStreamingUtils\CodingDojo\KataVista;
 
-use BedrockStreamingUtils\CodingDojo\KataVista\Description\Abbey;
-use BedrockStreamingUtils\CodingDojo\KataVista\Description\Cattle;
-use BedrockStreamingUtils\CodingDojo\KataVista\Description\Cows;
-use BedrockStreamingUtils\CodingDojo\KataVista\Description\DerelictShip;
-use BedrockStreamingUtils\CodingDojo\KataVista\Description\Field;
-use BedrockStreamingUtils\CodingDojo\KataVista\Description\FieldBarley;
-use BedrockStreamingUtils\CodingDojo\KataVista\Description\FieldWheat;
-use BedrockStreamingUtils\CodingDojo\KataVista\Description\Forest;
-use BedrockStreamingUtils\CodingDojo\KataVista\Description\Lighthouse;
-use BedrockStreamingUtils\CodingDojo\KataVista\Description\Meadow;
-use BedrockStreamingUtils\CodingDojo\KataVista\Description\Mountain;
-use BedrockStreamingUtils\CodingDojo\KataVista\Description\Ocean;
-use BedrockStreamingUtils\CodingDojo\KataVista\Description\Pines;
-use BedrockStreamingUtils\CodingDojo\KataVista\Description\Road1;
-use BedrockStreamingUtils\CodingDojo\KataVista\Description\Road2;
-use BedrockStreamingUtils\CodingDojo\KataVista\Description\Road3;
-use BedrockStreamingUtils\CodingDojo\KataVista\Description\Road4;
-use BedrockStreamingUtils\CodingDojo\KataVista\Description\Road5;
-use BedrockStreamingUtils\CodingDojo\KataVista\Description\Ship;
-use BedrockStreamingUtils\CodingDojo\KataVista\Description\SnowyMountains;
-use BedrockStreamingUtils\CodingDojo\KataVista\Description\Swamp;
-use BedrockStreamingUtils\CodingDojo\KataVista\Description\Tower;
-use BedrockStreamingUtils\CodingDojo\KataVista\Description\Village;
-use BedrockStreamingUtils\CodingDojo\KataVista\Description\Windmill;
+use BedrockStreamingUtils\CodingDojo\KataVista\Description\RuleAbbey;
+use BedrockStreamingUtils\CodingDojo\KataVista\Description\RuleCattle;
+use BedrockStreamingUtils\CodingDojo\KataVista\Description\RuleCows;
+use BedrockStreamingUtils\CodingDojo\KataVista\Description\RuleDerelictShip;
+use BedrockStreamingUtils\CodingDojo\KataVista\Description\RuleField;
+use BedrockStreamingUtils\CodingDojo\KataVista\Description\RuleFieldBarley;
+use BedrockStreamingUtils\CodingDojo\KataVista\Description\RuleFieldWheat;
+use BedrockStreamingUtils\CodingDojo\KataVista\Description\RuleForest;
+use BedrockStreamingUtils\CodingDojo\KataVista\Description\RuleLighthouse;
+use BedrockStreamingUtils\CodingDojo\KataVista\Description\RuleMeadow;
+use BedrockStreamingUtils\CodingDojo\KataVista\Description\RuleMountain;
+use BedrockStreamingUtils\CodingDojo\KataVista\Description\RuleOcean;
+use BedrockStreamingUtils\CodingDojo\KataVista\Description\RulePines;
+use BedrockStreamingUtils\CodingDojo\KataVista\Description\RuleRoad1;
+use BedrockStreamingUtils\CodingDojo\KataVista\Description\RuleRoad2;
+use BedrockStreamingUtils\CodingDojo\KataVista\Description\RuleRoad3;
+use BedrockStreamingUtils\CodingDojo\KataVista\Description\RuleRoad4;
+use BedrockStreamingUtils\CodingDojo\KataVista\Description\RuleRoad5;
+use BedrockStreamingUtils\CodingDojo\KataVista\Description\RuleShip;
+use BedrockStreamingUtils\CodingDojo\KataVista\Description\RuleSnowyMountains;
+use BedrockStreamingUtils\CodingDojo\KataVista\Description\RuleSwamp;
+use BedrockStreamingUtils\CodingDojo\KataVista\Description\RuleTower;
+use BedrockStreamingUtils\CodingDojo\KataVista\Description\RuleVillage;
+use BedrockStreamingUtils\CodingDojo\KataVista\Description\RuleWindmill;
 
 class Vista
 {
@@ -36,30 +36,30 @@ class Vista
     {
         /** @var array<int, Description> $descriptions */
         $descriptions = [
-            new Field(),
-            new FieldWheat(),
-            new FieldBarley(),
-            new Windmill(),
-            new Cattle(),
-            new Cows(),
-            new Meadow(),
-            new Village(),
-            new Forest(),
-            new Pines(),
-            new Abbey(),
-            new Mountain(),
-            new SnowyMountains(),
-            new Tower(),
-            new Ocean(),
-            new Lighthouse(),
-            new Ship(),
-            new Swamp(),
-            new DerelictShip(),
-            new Road1(),
-            new Road2(),
-            new Road3(),
-            new Road4(),
-            new Road5(),
+            new RuleField(),
+            new RuleFieldWheat(),
+            new RuleFieldBarley(),
+            new RuleWindmill(),
+            new RuleCattle(),
+            new RuleCows(),
+            new RuleMeadow(),
+            new RuleVillage(),
+            new RuleForest(),
+            new RulePines(),
+            new RuleAbbey(),
+            new RuleMountain(),
+            new RuleSnowyMountains(),
+            new RuleTower(),
+            new RuleOcean(),
+            new RuleLighthouse(),
+            new RuleShip(),
+            new RuleSwamp(),
+            new RuleDerelictShip(),
+            new RuleRoad1(),
+            new RuleRoad2(),
+            new RuleRoad3(),
+            new RuleRoad4(),
+            new RuleRoad5(),
         ];
 
         foreach ($descriptions as $description) {

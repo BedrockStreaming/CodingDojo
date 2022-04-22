@@ -2,7 +2,7 @@
 
 namespace BedrockStreamingUtils\CodingDojo\KataVista\Description;
 
-class Ship extends AbstractRule
+class RuleShip extends AbstractRule
 {
     public const LETTER = 'h';
     public const NAME = 'ship';
@@ -12,11 +12,11 @@ class Ship extends AbstractRule
      */
     protected function getDependencies(): array
     {
-        return [Ocean::LETTER];
+        return [RuleOcean::LETTER];
     }
 
     public function getDescription(): string
     {
-        return 'There is a <landmark>'.Ship::NAME.'</> leaving the <landmark>'.Ocean::NAME.'</> to the <position>right</>.';
+        return 'There is a <landmark>'.RuleShip::NAME.'</> leaving the <landmark>'.RuleOcean::NAME.'</> to the <position>right</>.';
     }
 }

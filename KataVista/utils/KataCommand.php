@@ -2,7 +2,7 @@
 
 namespace BedrockStreamingUtils\CodingDojo\KataVista;
 
-use BedrockStreamingUtils\CodingDojo\KataVista\Description\Meadow;
+use BedrockStreamingUtils\CodingDojo\KataVista\Description\RuleMeadow;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Formatter\OutputFormatterStyle;
 use Symfony\Component\Console\Input\InputArgument;
@@ -85,7 +85,7 @@ class KataCommand extends Command
             $io->text('There should already be a failing test. First, fix the test with `make all` for the following landmark, then use the command again as indicated in the end.');
             $io->newLine(2);
 
-            $newDescription = new Meadow();
+            $newDescription = new RuleMeadow();
         } else {
             $availableDescription = $this->vista->getVisible(...$descriptionLetters);
             if (empty($availableDescription)) {

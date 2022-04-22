@@ -2,10 +2,10 @@
 
 namespace BedrockStreamingUtils\CodingDojo\KataVista\Description;
 
-class Forest extends AbstractRule
+class RuleMountain extends AbstractRule
 {
-    public const LETTER = 'F';
-    public const NAME = 'forest';
+    public const LETTER = 'M';
+    public const NAME = 'mountain';
 
     /**
      * @return array<int, string>
@@ -17,6 +17,6 @@ class Forest extends AbstractRule
 
     public function getDescription(): string
     {
-        return 'There is a <landmark>'.Forest::NAME.'</> on the <position>left</>.';
+        return 'There are multiple <landmark>'.RuleMountain::NAME.'</> in the <position>background</>.';
     }
 }

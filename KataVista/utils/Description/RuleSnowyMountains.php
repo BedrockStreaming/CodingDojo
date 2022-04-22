@@ -2,7 +2,7 @@
 
 namespace BedrockStreamingUtils\CodingDojo\KataVista\Description;
 
-class SnowyMountains extends AbstractRule
+class RuleSnowyMountains extends AbstractRule
 {
     public const LETTER = 'S';
     public const NAME = 'snow';
@@ -12,11 +12,11 @@ class SnowyMountains extends AbstractRule
      */
     protected function getDependencies(): array
     {
-        return [Mountain::LETTER];
+        return [RuleMountain::LETTER];
     }
 
     public function getDescription(): string
     {
-        return 'The <position>left</>most <landmark>'.Mountain::NAME.'</> is covered in <landmark>'.SnowyMountains::NAME.'</>.';
+        return 'The <position>left</>most <landmark>'.RuleMountain::NAME.'</> is covered in <landmark>'.RuleSnowyMountains::NAME.'</>.';
     }
 }

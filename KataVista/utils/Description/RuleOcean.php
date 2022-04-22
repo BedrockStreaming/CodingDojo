@@ -2,21 +2,21 @@
 
 namespace BedrockStreamingUtils\CodingDojo\KataVista\Description;
 
-class Road3 extends AbstractRule
+class RuleOcean extends AbstractRule
 {
-    public const LETTER = '3';
-    public const NAME = 'crossroads';
+    public const LETTER = 'O';
+    public const NAME = 'ocean';
 
     /**
      * @return array<int, string>
      */
     protected function getDependencies(): array
     {
-        return [Road2::LETTER];
+        return [];
     }
 
     public function getDescription(): string
     {
-        return 'There is a <landmark>'.Road3::NAME.'</> inside the <landmark>'.Meadow::NAME.'</>.';
+        return 'There is an large <landmark>'.RuleOcean::NAME.'</> taking half the width in the <position>background</>.';
     }
 }

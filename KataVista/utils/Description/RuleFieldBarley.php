@@ -2,7 +2,7 @@
 
 namespace BedrockStreamingUtils\CodingDojo\KataVista\Description;
 
-class FieldBarley extends AbstractRule
+class RuleFieldBarley extends AbstractRule
 {
     public const LETTER = 'b';
     public const NAME = 'barley';
@@ -12,11 +12,11 @@ class FieldBarley extends AbstractRule
      */
     protected function getDependencies(): array
     {
-        return [Field::LETTER];
+        return [RuleField::LETTER];
     }
 
     public function getDescription(): string
     {
-        return 'There is <landmark>'.FieldBarley::NAME.'</> in the <position>right</>most <landmark>'.Field::NAME.'</>.';
+        return 'There is <landmark>'.RuleFieldBarley::NAME.'</> in the <position>right</>most <landmark>'.RuleField::NAME.'</>.';
     }
 }

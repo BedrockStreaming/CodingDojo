@@ -2,7 +2,7 @@
 
 namespace BedrockStreamingUtils\CodingDojo\KataVista\Description;
 
-class Tower extends AbstractRule
+class RuleTower extends AbstractRule
 {
     public const LETTER = 'T';
     public const NAME = 'tower';
@@ -12,11 +12,11 @@ class Tower extends AbstractRule
      */
     protected function getDependencies(): array
     {
-        return [Mountain::LETTER];
+        return [RuleMountain::LETTER];
     }
 
     public function getDescription(): string
     {
-        return 'There is a <landmark>'.Tower::NAME.'</> on the <position>right</>most <landmark>'.Mountain::NAME.'</>.';
+        return 'There is a <landmark>'.RuleTower::NAME.'</> on the <position>right</>most <landmark>'.RuleMountain::NAME.'</>.';
     }
 }

@@ -2,7 +2,7 @@
 
 namespace BedrockStreamingUtils\CodingDojo\KataVista\Description;
 
-class Abbey extends AbstractRule
+class RuleAbbey extends AbstractRule
 {
     public const LETTER = 'A';
     public const NAME = 'abbey';
@@ -12,11 +12,11 @@ class Abbey extends AbstractRule
      */
     protected function getDependencies(): array
     {
-        return [Meadow::LETTER, Forest::LETTER, Village::LETTER];
+        return [RuleMeadow::LETTER, RuleForest::LETTER, RuleVillage::LETTER];
     }
 
     public function getDescription(): string
     {
-        return 'There is an <landmark>'.Abbey::NAME.'</> in the <landmark>'.Meadow::NAME.'</> between the <landmark>'.Forest::NAME.'</> and the <landmark>'.Village::NAME.'</>.';
+        return 'There is an <landmark>'.RuleAbbey::NAME.'</> in the <landmark>'.RuleMeadow::NAME.'</> between the <landmark>'.RuleForest::NAME.'</> and the <landmark>'.RuleVillage::NAME.'</>.';
     }
 }

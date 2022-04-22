@@ -2,7 +2,7 @@
 
 namespace BedrockStreamingUtils\CodingDojo\KataVista\Description;
 
-class Village extends AbstractRule
+class RuleVillage extends AbstractRule
 {
     public const LETTER = 'v';
     public const NAME = 'village';
@@ -12,11 +12,11 @@ class Village extends AbstractRule
      */
     protected function getDependencies(): array
     {
-        return [Meadow::LETTER];
+        return [RuleMeadow::LETTER];
     }
 
     public function getDescription(): string
     {
-        return 'There is a <landmark>'.Village::NAME.'</> on the <position>right</position> of the <landmark>'.Meadow::NAME.'</>.';
+        return 'There is a <landmark>'.RuleVillage::NAME.'</> on the <position>right</position> of the <landmark>'.RuleMeadow::NAME.'</>.';
     }
 }

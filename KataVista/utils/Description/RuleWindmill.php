@@ -2,7 +2,7 @@
 
 namespace BedrockStreamingUtils\CodingDojo\KataVista\Description;
 
-class Windmill extends AbstractRule
+class RuleWindmill extends AbstractRule
 {
     public const LETTER = 'W';
     public const NAME = 'windmill';
@@ -12,11 +12,11 @@ class Windmill extends AbstractRule
      */
     protected function getDependencies(): array
     {
-        return [Field::LETTER];
+        return [RuleField::LETTER];
     }
 
     public function getDescription(): string
     {
-        return 'There is a <landmark>'.Windmill::NAME.'</> in the <position>middle</> of the <landmark>'.Field::NAME.'</>.';
+        return 'There is a <landmark>'.RuleWindmill::NAME.'</> in the <position>middle</> of the <landmark>'.RuleField::NAME.'</>.';
     }
 }

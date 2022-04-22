@@ -2,21 +2,21 @@
 
 namespace BedrockStreamingUtils\CodingDojo\KataVista\Description;
 
-class Cows extends AbstractRule
+class RuleField extends AbstractRule
 {
-    public const LETTER = 'C';
-    public const NAME = 'cows';
+    public const LETTER = 'f';
+    public const NAME = 'field';
 
     /**
      * @return array<int, string>
      */
     protected function getDependencies(): array
     {
-        return [Cattle::LETTER];
+        return [];
     }
 
     public function getDescription(): string
     {
-        return 'The <landmark>'.Cattle::NAME.'</> is mostly <landmark>'.Cows::NAME.'</>.';
+        return 'There are multiple <landmark>'.RuleField::NAME.'</> at <position>first sight</>.';
     }
 }

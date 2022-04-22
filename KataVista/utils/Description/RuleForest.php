@@ -2,10 +2,10 @@
 
 namespace BedrockStreamingUtils\CodingDojo\KataVista\Description;
 
-class Ocean extends AbstractRule
+class RuleForest extends AbstractRule
 {
-    public const LETTER = 'O';
-    public const NAME = 'ocean';
+    public const LETTER = 'F';
+    public const NAME = 'forest';
 
     /**
      * @return array<int, string>
@@ -17,6 +17,6 @@ class Ocean extends AbstractRule
 
     public function getDescription(): string
     {
-        return 'There is an large <landmark>'.Ocean::NAME.'</> taking half the width in the <position>background</>.';
+        return 'There is a <landmark>'.RuleForest::NAME.'</> on the <position>left</>.';
     }
 }

@@ -2,7 +2,7 @@
 
 namespace BedrockStreamingUtils\CodingDojo\KataVista\Description;
 
-class Road2 extends AbstractRule
+class RuleRoad2 extends AbstractRule
 {
     public const LETTER = '2';
     public const NAME = 'road';
@@ -12,11 +12,11 @@ class Road2 extends AbstractRule
      */
     protected function getDependencies(): array
     {
-        return [Forest::LETTER, Village::LETTER];
+        return [RuleForest::LETTER, RuleVillage::LETTER];
     }
 
     public function getDescription(): string
     {
-        return 'There is a <landmark>'.Road2::NAME.'</> going from the <landmark>'.Village::NAME.'</> to the <landmark>'.Forest::NAME.'</> through the <landmark>'.Meadow::NAME.'</>.';
+        return 'There is a <landmark>'.RuleRoad2::NAME.'</> going from the <landmark>'.RuleVillage::NAME.'</> to the <landmark>'.RuleForest::NAME.'</> through the <landmark>'.RuleMeadow::NAME.'</>.';
     }
 }
