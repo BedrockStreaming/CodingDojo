@@ -68,6 +68,16 @@ class PainterTest extends TestCase
         );
     }
 
+    private function helperVistaContainsMultipleLandmark(string $landmark): void
+    {
+        $painter = new Painter();
+
+        self::assertMatchesRegularExpression(
+            '#.*'.$landmark.'.*'.$landmark.'.*#',
+            $painter->captureVista()->describe()
+        );
+    }
+
     private function helperVistaContainsLandmarkInTheForeground(string $landmark): void
     {
         $painter = new Painter();
