@@ -12,6 +12,7 @@ The `.template` folder contains a list of useful files to use when creating a ne
 When adding a new directory, don't forget to link it below.
 
 # Exercises
+* [KataVista](KataVista/README.md), short intro to coding dojo, and TDD.
 * [KataGreed](KataGreed/README.md), about naive implementation and refactoring.
 
 # Practice

@@ -1,11 +1,14 @@
 # NAME
 Inspired from [CodingDojo.org](https://codingdojo.org/kata/Greed/)
 
-## Workforce
+## Goals
+_Indicates the goal of the development._
+
+## Workforce & Process
 * Estimated time:
 * Goal:
 
-## Rules
+### Description
 _Indicates clearly the rules of the exercise so there could be no time lost debating them during the time of the dojo._
 
 ## Example
