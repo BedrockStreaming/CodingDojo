@@ -24,7 +24,7 @@ class RuleFieldBarley extends AbstractRule
     {
         return [
             Tips::HELPER_POSITION,
-            Tips::HELPER_STACK
+            Tips::HELPER_STACK,
         ];
     }
 }
