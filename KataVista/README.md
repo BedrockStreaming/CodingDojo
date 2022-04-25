@@ -18,11 +18,11 @@ Everyone should have made a `composer install` inside the `KataVista` folder.
 ⚠️ **Make sure that everyone has read this readme and understood the rule with the goal.**
 
 Finally, proceed with short iterations as follows:
-* ⌨️ One *driver*, who do the coding,
+* ⌨️ One *driver*, who do the coding, and do not talk,
 * 🧑‍✈️️ One *pilot*, who gives the coding instruction,
 * 🏫 All other attendees as *spectator*, who watch,
 
-Note that the *spectator* can talk freely with the driver. This kata is intended to have really short iterations.
+Note that the *spectator* can talk freely with the *pilot*. This kata is intended to have really short iterations.
 
 ### Kickstart
 _Randomly set a driver and a pilot for the first step._
