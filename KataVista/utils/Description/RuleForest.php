@@ -19,4 +19,12 @@ class RuleForest extends AbstractRule
     {
         return 'There is a <landmark>'.RuleForest::NAME.'</> on the <position>left</>.';
     }
+
+    public function getTips(): array
+    {
+        return [
+            Tips::HELPER_SIMPLE,
+            Tips::HELPER_POSITION,
+        ];
+    }
 }

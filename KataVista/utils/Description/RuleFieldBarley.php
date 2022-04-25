@@ -19,4 +19,12 @@ class RuleFieldBarley extends AbstractRule
     {
         return 'There is <landmark>'.RuleFieldBarley::NAME.'</> in the <position>right</>most <landmark>'.RuleField::NAME.'</>.';
     }
+
+    public function getTips(): array
+    {
+        return [
+            Tips::HELPER_POSITION,
+            Tips::HELPER_STACK
+        ];
+    }
 }

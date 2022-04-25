@@ -19,4 +19,11 @@ class RuleRoad4 extends AbstractRule
     {
         return 'There is a <landmark>'.RuleRoad4::NAME.'</> from the <landmark>'.RuleMeadow::NAME.'</> to the <landmark>'.RuleTower::NAME.'</>.';
     }
+
+    public function getTips(): array
+    {
+        return [
+            Tips::YOLO,
+        ];
+    }
 }

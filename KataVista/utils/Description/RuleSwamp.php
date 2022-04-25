@@ -19,4 +19,11 @@ class RuleSwamp extends AbstractRule
     {
         return 'There is a <landmark>'.RuleSwamp::NAME.'</> between the <landmark>'.RuleMountain::NAME.'</> and the <landmark>'.RuleOcean::NAME.'</>.';
     }
+
+    public function getTips(): array
+    {
+        return [
+            Tips::HELPER_RELATIVE,
+        ];
+    }
 }

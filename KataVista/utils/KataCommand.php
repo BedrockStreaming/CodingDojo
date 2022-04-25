@@ -103,6 +103,21 @@ class KataCommand extends Command
 
         $descriptions = $this->vista->getDescribed($newDescriptionLetter, ...$descriptionLetters);
 
+        $existingTips = array_merge(
+            ...array_map(
+                fn (Description $description): array => $description->getLetter() === $newDescriptionLetter ? [] : $description->getTips(),
+                $descriptions
+            )
+        );
+        $newTips = array_filter(
+            $newDescription->getTips(),
+            fn (string $tip): bool => !in_array($tip, $existingTips)
+        );
+        if (!empty($newTips)) {
+            $io->section('Here some free tips!');
+            $io->listing($newTips);
+        }
+
         $io->section('List of visible landmarks');
         $io->listing(array_map(fn (Description $rule): string => '('.$rule->getLetter().') '.$rule->getDescription(), $descriptions));
 

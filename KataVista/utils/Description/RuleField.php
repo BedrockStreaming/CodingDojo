@@ -19,4 +19,14 @@ class RuleField extends AbstractRule
     {
         return 'There are multiple <landmark>'.RuleField::NAME.'</> at <position>first sight</>.';
     }
+
+    public function getTips(): array
+    {
+        return [
+            Tips::HELPER_SIMPLE,
+            Tips::HELPER_GROUND,
+            Tips::HELPER_NUMBER,
+            Tips::HELPER_MULTIPLE,
+        ];
+    }
 }

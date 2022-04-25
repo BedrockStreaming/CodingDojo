@@ -19,4 +19,13 @@ class RuleShip extends AbstractRule
     {
         return 'There is a <landmark>'.RuleShip::NAME.'</> leaving the <landmark>'.RuleOcean::NAME.'</> to the <position>right</>.';
     }
+
+    public function getTips(): array
+    {
+        return [
+            Tips::HELPER_POSITION,
+            Tips::HELPER_STACK,
+            Tips::HELPER_RELATIVE,
+        ];
+    }
 }

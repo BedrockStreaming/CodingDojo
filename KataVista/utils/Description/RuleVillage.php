@@ -19,4 +19,12 @@ class RuleVillage extends AbstractRule
     {
         return 'There is a <landmark>'.RuleVillage::NAME.'</> on the <position>right</position> of the <landmark>'.RuleMeadow::NAME.'</>.';
     }
+
+    public function getTips(): array
+    {
+        return [
+            Tips::HELPER_POSITION,
+            Tips::HELPER_RELATIVE,
+        ];
+    }
 }

@@ -17,6 +17,14 @@ class RulePines extends AbstractRule
 
     public function getDescription(): string
     {
-        return 'The <landmark>'.RuleForest::NAME.'</> is made of <landmark>'.RulePines::NAME.'</>.';
+        return 'The <landmark>'.RuleForest::NAME.'</> in front of the <landmark>'.RuleMountain::NAME.'</> is made of <landmark>'.RulePines::NAME.'</>.';
+    }
+
+    public function getTips(): array
+    {
+        return [
+            Tips::HELPER_STACK,
+            Tips::HELPER_RELATIVE,
+        ];
     }
 }

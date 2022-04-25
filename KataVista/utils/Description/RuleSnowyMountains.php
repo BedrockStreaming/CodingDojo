@@ -17,6 +17,13 @@ class RuleSnowyMountains extends AbstractRule
 
     public function getDescription(): string
     {
-        return 'The <position>left</>most <landmark>'.RuleMountain::NAME.'</> is covered in <landmark>'.RuleSnowyMountains::NAME.'</>.';
+        return 'The leftmost <landmark>'.RuleMountain::NAME.'</> is covered in <landmark>'.RuleSnowyMountains::NAME.'</>.';
+    }
+
+    public function getTips(): array
+    {
+        return [
+            Tips::HELPER_STACK,
+        ];
     }
 }

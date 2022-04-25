@@ -19,4 +19,11 @@ class RuleWindmill extends AbstractRule
     {
         return 'There is a <landmark>'.RuleWindmill::NAME.'</> in the <position>middle</> of the <landmark>'.RuleField::NAME.'</>.';
     }
+
+    public function getTips(): array
+    {
+        return [
+            Tips::HELPER_STACK,
+        ];
+    }
 }

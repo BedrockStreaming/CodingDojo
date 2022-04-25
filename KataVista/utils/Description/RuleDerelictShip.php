@@ -19,4 +19,11 @@ class RuleDerelictShip extends AbstractRule
     {
         return 'There is a <landmark>derelict ship</> in the <landmark>'.RuleSwamp::NAME.'</>.';
     }
+
+    public function getTips(): array
+    {
+        return [
+            Tips::HELPER_STACK,
+        ];
+    }
 }

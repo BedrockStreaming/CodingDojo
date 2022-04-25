@@ -19,4 +19,11 @@ class RuleMeadow extends AbstractRule
     {
         return 'There is a <landmark>'.RuleMeadow::NAME.'</>.';
     }
+
+    public function getTips(): array
+    {
+        return [
+            Tips::HELPER_SIMPLE,
+        ];
+    }
 }

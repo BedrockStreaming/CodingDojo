@@ -19,4 +19,12 @@ class RuleAbbey extends AbstractRule
     {
         return 'There is an <landmark>'.RuleAbbey::NAME.'</> in the <landmark>'.RuleMeadow::NAME.'</> between the <landmark>'.RuleForest::NAME.'</> and the <landmark>'.RuleVillage::NAME.'</>.';
     }
+
+    public function getTips(): array
+    {
+        return [
+            Tips::HELPER_STACK,
+            Tips::HELPER_RELATIVE,
+        ];
+    }
 }

@@ -19,4 +19,11 @@ class RuleRoad5 extends AbstractRule
     {
         return 'The <landmark>'.RuleRoad2::NAME.'</> through the meadow forks into a <landmark>'.RuleRoad5::NAME.'</> to the <landmark>'.RuleAbbey::NAME.'</>.';
     }
+
+    public function getTips(): array
+    {
+        return [
+            Tips::YOLO,
+        ];
+    }
 }

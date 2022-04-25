@@ -48,4 +48,9 @@ abstract class AbstractRule implements Description
      * @return array<int, string>
      */
     abstract protected function getDependencies(): array;
+
+    public function getTips(): array
+    {
+        return [];
+    }
 }

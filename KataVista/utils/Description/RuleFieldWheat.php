@@ -19,4 +19,12 @@ class RuleFieldWheat extends AbstractRule
     {
         return 'The <position>left</>most <landmark>'.RuleField::NAME.'</> is a <landmark>'.RuleFieldWheat::NAME.'</> field.';
     }
+
+    public function getTips(): array
+    {
+        return [
+            Tips::HELPER_POSITION,
+            Tips::HELPER_STACK,
+        ];
+    }
 }

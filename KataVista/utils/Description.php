@@ -13,4 +13,9 @@ interface Description
     public function isAvailableToDescribe(string ...$descriptionLetters): bool;
 
     public function getDescription(): string;
+
+    /**
+     * @return array<int, string>
+     */
+    public function getTips(): array;
 }

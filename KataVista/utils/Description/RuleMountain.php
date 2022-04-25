@@ -19,4 +19,14 @@ class RuleMountain extends AbstractRule
     {
         return 'There are multiple <landmark>'.RuleMountain::NAME.'</> in the <position>background</>.';
     }
+
+    public function getTips(): array
+    {
+        return [
+            Tips::HELPER_SIMPLE,
+            Tips::HELPER_GROUND,
+            Tips::HELPER_NUMBER,
+            Tips::HELPER_MULTIPLE,
+        ];
+    }
 }

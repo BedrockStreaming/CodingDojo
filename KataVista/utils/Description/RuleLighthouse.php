@@ -19,4 +19,12 @@ class RuleLighthouse extends AbstractRule
     {
         return 'There is a <landmark>'.RuleLighthouse::NAME.'</> in the <position>background</> of the <landmark>'.RuleVillage::NAME.'</>, dominating the <landmark>'.RuleOcean::NAME.'</>.';
     }
+
+    public function getTips(): array
+    {
+        return [
+            Tips::HELPER_STACK,
+            Tips::HELPER_RELATIVE,
+        ];
+    }
 }

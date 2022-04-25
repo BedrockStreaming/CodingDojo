@@ -19,4 +19,12 @@ class RuleCattle extends AbstractRule
     {
         return 'There are <landmark>'.RuleCattle::NAME.'</> on the <position>right</>.';
     }
+
+    public function getTips(): array
+    {
+        return [
+            Tips::HELPER_SIMPLE,
+            Tips::HELPER_POSITION,
+        ];
+    }
 }

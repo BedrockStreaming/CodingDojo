@@ -17,6 +17,13 @@ class RuleTower extends AbstractRule
 
     public function getDescription(): string
     {
-        return 'There is a <landmark>'.RuleTower::NAME.'</> on the <position>right</>most <landmark>'.RuleMountain::NAME.'</>.';
+        return 'There is a <landmark>'.RuleTower::NAME.'</> on the rightmost <landmark>'.RuleMountain::NAME.'</>.';
+    }
+
+    public function getTips(): array
+    {
+        return [
+            Tips::HELPER_STACK,
+        ];
     }
 }

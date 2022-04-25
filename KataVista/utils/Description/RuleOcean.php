@@ -17,6 +17,16 @@ class RuleOcean extends AbstractRule
 
     public function getDescription(): string
     {
-        return 'There is an large <landmark>'.RuleOcean::NAME.'</> taking half the width in the <position>background</>.';
+        return 'There is an large <landmark>'.RuleOcean::NAME.'</> taking nearly half the width of the <position>background</>.';
+    }
+
+    public function getTips(): array
+    {
+        return [
+            Tips::HELPER_SIMPLE,
+            Tips::HELPER_GROUND,
+            Tips::HELPER_NUMBER,
+            Tips::HELPER_MULTIPLE,
+        ];
     }
 }

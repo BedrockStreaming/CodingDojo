@@ -19,4 +19,11 @@ class RuleCows extends AbstractRule
     {
         return 'The <landmark>'.RuleCattle::NAME.'</> is mostly <landmark>'.RuleCows::NAME.'</>.';
     }
+
+    public function getTips(): array
+    {
+        return [
+            Tips::HELPER_STACK,
+        ];
+    }
 }

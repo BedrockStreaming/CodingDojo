@@ -19,4 +19,11 @@ class RuleRoad3 extends AbstractRule
     {
         return 'There is a <landmark>'.RuleRoad3::NAME.'</> inside the <landmark>'.RuleMeadow::NAME.'</>.';
     }
+
+    public function getTips(): array
+    {
+        return [
+            Tips::YOLO,
+        ];
+    }
 }
