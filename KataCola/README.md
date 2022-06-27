@@ -13,13 +13,17 @@ The price are the same (0.80) for each products.
 
 These rules will evolve.
 
-We need to have 2 teams: 
-1st will be in charge of the coin management.
+To do so, we need to have 2 teams that will work on 2 subjects:
 
-2nd will be in charge of the product management.
+- Team 1:
+  - Coin management
+  - Create new products
+- Team 2:
+  - Product management
+  - Stock management
 
 
-### Accept Coins (1st team)
+### Accept Coins (Team 1)
 _As a vendor_
 _I want a vending machine that accepts coins_
 _So that I can collect money from the customer_
@@ -40,7 +44,7 @@ Example 2
 $ INSERTCOIN 10, 1, 50, 10, 5
 > CREDIT 1.70 COIN-RETURN 0,05
 ```
-### Select Product (2nd team)
+### Select Product (Team 2)
 _As a vendor_
 _I want customers to select products_
 _So that I can give them an incentive to put money in the machine_
@@ -68,7 +72,7 @@ $ ORDER F
 
 ```
 
-### Stock management (2nd Team)
+### Stock management (Team 2)
 We will have a limited amount of product (5 of each)
 In case of a product is missing, the vending machine should display something like that:
 ```
@@ -87,7 +91,7 @@ At start, the machine contains:
 
 If we can't make change, display EXACT CHANGE ONLY
 
-### New products (1st team)
+### New products (Team 1)
 Add new product in the vending machine
 Water (W) price is 0.50 cents
 Mars (M) price 1 euro
