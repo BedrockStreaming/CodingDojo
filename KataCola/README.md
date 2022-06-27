@@ -1,5 +1,4 @@
 # INTRO
-
 In a first time, we don't care about the stock management (infinite products, infinite coin)
 
 The price are the same (0.80) for each products.
@@ -8,6 +7,7 @@ This rules will evolve.
 
 We need to have 2 teams: 
 1st will be in charge of the coin management.
+
 2nd will be in charge of the product management.
 
 
@@ -25,7 +25,7 @@ When a valid coin is inserted the amount of the coin will be added to the curren
 When there are no coins inserted, the machine displays INSERT COIN.
 
 Rejected coins are placed in the coin return.
-Exemples
+Examples
 ```
 Example 1
 $ INSERTCOIN 10, 10, 20, 10
@@ -46,7 +46,7 @@ There are three products: cola (C) for 0.80€, sprite (S) for 0.80€, and fant
 If the display is checked again, it will display INSERT COIN and the current amount will be set to 0.00€.
 
 If there is not enough money inserted then the machine displays PRICE and the price of the item and subsequent checks of the display will display either INSERT COIN or the current amount as appropriate.
-Exemples
+Examples
 ```
 Example 1
 $ INSERTCOIN 50, 20, 10 
@@ -65,7 +65,6 @@ $ ORDER F
 ```
 
 # Stock management (2nd Team)
-
 We will have a limited amount of product (5 of each)
 In case of a product is missing, the vending machine should display something like that:
 ```
@@ -82,7 +81,15 @@ At start, the machine contains:
  - 5 coins of 20 cents
  - 5 coins of 50 cents
 
+If we can't make change, display EXACT CHANGE ONLY
+
 # New products (1st team)
-add new product in the vending machine
+Add new product in the vending machine
 Water (W) price is 0.50 cents
 Mars (M) price 1 euro
+
+# HELP
+You can display all the available command by typing in terminal
+```
+make help
+```
