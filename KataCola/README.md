@@ -1,4 +1,17 @@
-# Accept Coins
+#INTRO
+
+In a first time, we don't care about the stock management (infinite products, infinite coin)
+
+The price are the same (0.80) for each products.
+
+This rules will evolve.
+
+We need to have 2 teams: 
+1st will be in charge of the coin management.
+2nd will be in charge of the product management.
+
+
+# Accept Coins (1st team)
 As a vendor
 
 I want a vending machine that accepts coins
@@ -21,7 +34,7 @@ Example 2
 $ INSERTCOIN 10, 1, 50, 10, 5
 > CREDIT 1.70 COIN-RETURN 0,05
 ```
-# Select Product
+# Select Product (2nd team)
 As a vendor
 
 I want customers to select products
@@ -50,3 +63,26 @@ $ ORDER F
 > PRODUCT-RETURN F COIN-RETURN 0.20
 
 ```
+
+# Stock management (2nd Team)
+
+We will have a limited amount of product (5 of each)
+In case of a product is missing, the vending machine should display something like that:
+```
+$ ORDER C
+> STOCK OUT OF Coca . Please choose an other product
+
+```
+
+We have a limited stock of coin too to return money.
+Try to use the less coin to return money
+tips: if you need to return 20 cents,  use 1 coin of 20, instead of 2 coins of 10 (if available)
+At start, the machine contains:
+ - 5 coins of 10 cents
+ - 5 coins of 20 cents
+ - 5 coins of 50 cents
+
+# New products (1st team)
+add new product in the vending machine
+Water (W) price is 0.50 cents
+Mars (M) price 1 euro
