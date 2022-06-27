@@ -7,10 +7,8 @@ In this exercise you will build the brains of a vending machine. It will accept 
 The point of this kata is to learn how to work efficiently on a same project with collaborative teams.
 
 ## Features
-In a first time, we don't care about the stock management (infinite products, infinite coin)
-
-The price are the same (0.80) for each products.
-
+In a first time, we don't care about the stock management (infinite products, infinite coin)  
+The price are the same (0.80) for each product.  
 These rules will evolve.
 
 To do so, we need to have 2 teams that will work on 2 subjects:
@@ -24,17 +22,14 @@ To do so, we need to have 2 teams that will work on 2 subjects:
 
 
 ### Accept Coins (Team 1)
-_As a vendor_
-_I want a vending machine that accepts coins_
+_As a vendor_  
+_I want a vending machine that accepts coins_  
 _So that I can collect money from the customer_
 
-The vending machine will accept valid coins (10, 20, 50 cents and 1 euro) and reject invalid ones (1, 2 cents and 2 euros).
-
-When a valid coin is inserted the amount of the coin will be added to the current amount and the display will be updated.
-
-When there are no coins inserted, the machine displays INSERT COIN.
-
-Rejected coins are placed in the coin return.
+The vending machine will accept valid coins (10, 20, 50 cents and 1 euro) and reject invalid ones (1, 2 cents and 2 euros).  
+When a valid coin is inserted the amount of the coin will be added to the current amount and the display will be updated.  
+When there are no coins inserted, the machine displays INSERT COIN.  
+Rejected coins are placed in the coin return.  
 Examples
 ```
 Example 1
@@ -45,8 +40,8 @@ $ INSERTCOIN 10, 1, 50, 10, 5
 > CREDIT 1.70 COIN-RETURN 0,05
 ```
 ### Select Product (Team 2)
-_As a vendor_
-_I want customers to select products_
+_As a vendor_  
+_I want customers to select products_  
 _So that I can give them an incentive to put money in the machine_
 
 There are three products: cola (C) for 0.80€, sprite (S) for 0.80€, and fanta (F) for 0.80€. When the respective button is pressed and enough money has been inserted, the product is dispensed and the machine displays THANK YOU.
@@ -92,9 +87,9 @@ At start, the machine contains:
 If we can't make change, display EXACT CHANGE ONLY
 
 ### New products (Team 1)
-Add new product in the vending machine
-Water (W) price is 0.50 cents
-Mars (M) price 1 euro
+Add new product in the vending machine:
+- Water (W) price is 0.50 cents with a stock of 5
+- Mars (M) price 1 euro with a stock of 5
 
 ## HELP
 You can display all the available command by typing in terminal
