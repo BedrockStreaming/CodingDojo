@@ -15,11 +15,11 @@ Rejected coins are placed in the coin return.
 Exemples
 ```
 Example 1
-$ 10, 10, 20, 10
+$ INSERTCOIN 10, 10, 20, 10
 > CREDIT 0.50
 Example 2
-$ 10, 1, 50, 10
-> CREDIT 0.20 COIN-RETURN 1, 50
+$ INSERTCOIN 10, 1, 50, 10, 5
+> CREDIT 1.70 COIN-RETURN 0,05
 ```
 # Select Product
 As a vendor
@@ -36,10 +36,17 @@ If there is not enough money inserted then the machine displays PRICE and the pr
 Exemples
 ```
 Example 1
-$ 50, 20, 10, C
-> PRODUCT-RETURN A COIN-RETURN 0
+$ INSERTCOIN 50, 20, 10 
+$ ORDER C
+
+> PRODUCT-RETURN C COIN-RETURN 0
 Example 2
-$ 1 F
-> CREDIT 1.00 PRODUCT-RETURN 0 COIN-RETURN 0.2
+$ ORDER F
+> PRICE 0.80
+$ INSERTCOIN 1
+> CREDIT 1.00 
+$ ORDER F
+> PRODUCT-RETURN F COIN-RETURN 0.20
+
 
 ```
