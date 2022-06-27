@@ -1,7 +1,10 @@
 # Accept Coins
 As a vendor
+
 I want a vending machine that accepts coins
+
 So that I can collect money from the customer
+
 The vending machine will accept valid coins (10, 20, 50 cents and 1 euro) and reject invalid ones (1, 2 cents and 2 euros). When a valid coin is inserted the amount of the coin will be added to the current amount and the display will be updated. When there are no coins inserted, the machine displays INSERT COIN. Rejected coins are placed in the coin return.
 Exemples
 ```
