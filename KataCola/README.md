@@ -1,4 +1,5 @@
-# KataCola
+# KataCola WORK IN PROGRESS ....
+
 Inspired from [guyroyse](https://github.com/guyroyse/vending-machine-kata)
 
 ## Description 
