@@ -93,3 +93,6 @@ You can display all the available command by typing in terminal
 ```
 make help
 ```
+
+# Miscellaneous
+Despite the fact there is 2 teams, this is not a competition, don't hesitate to help each other ... and communicate 
