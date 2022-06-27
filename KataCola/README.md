@@ -1,4 +1,4 @@
-#INTRO
+# INTRO
 
 In a first time, we don't care about the stock management (infinite products, infinite coin)
 
