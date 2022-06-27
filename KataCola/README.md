@@ -39,7 +39,7 @@ Example 2
 $ INSERTCOIN 10, 1, 50, 10, 5
 > CREDIT 1.70 COIN-RETURN 0,05
 ```
-### Select Product (Team 2)
+### Select Product (Team 2) (EXACT change only)
 _As a vendor_  
 _I want customers to select products_  
 _So that I can give them an incentive to put money in the machine_
@@ -57,7 +57,27 @@ $ INSERTCOIN 50, 20, 10
 $ ORDER C
 > PRODUCT-RETURN C COIN-RETURN 0
 
-Example 2
+```
+
+### Return Coins
+
+We need to integrate the change system.  
+Try to return less coin possible (If you need to return 20 cents, use 1 coin of 20, instead of 2 coins of 10).
+Tips: 
+Alaways try to return the max of high valuable coins.  
+
+If you need to return 50 cents, you should try to return in this order:  
+ - 1 coin of 50 cents  
+ - 2 coins of 20 cents and 1 of 10 cents 
+ - 1 coin of 20 and 3 of 10 cents
+ - 5 coins of 10 cents  
+
+
+### Select products with return coins integrated
+
+As we already done it first... but with the possibility to manage changes.
+```
+Example 1
 $ ORDER F
 > PRICE 0.80 CREDIT 0
 $ INSERTCOIN 1
