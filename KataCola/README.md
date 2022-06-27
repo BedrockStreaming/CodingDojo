@@ -6,8 +6,11 @@ I want a vending machine that accepts coins
 So that I can collect money from the customer
 
 The vending machine will accept valid coins (10, 20, 50 cents and 1 euro) and reject invalid ones (1, 2 cents and 2 euros).
+
 When a valid coin is inserted the amount of the coin will be added to the current amount and the display will be updated.
+
 When there are no coins inserted, the machine displays INSERT COIN.
+
 Rejected coins are placed in the coin return.
 Exemples
 ```
@@ -26,7 +29,9 @@ I want customers to select products
 So that I can give them an incentive to put money in the machine
 
 There are three products: cola (C) for 0.80€, sprite (S) for 0.80€, and fanta (F) for 0.80€. When the respective button is pressed and enough money has been inserted, the product is dispensed and the machine displays THANK YOU.
+
 If the display is checked again, it will display INSERT COIN and the current amount will be set to 0.00€.
+
 If there is not enough money inserted then the machine displays PRICE and the price of the item and subsequent checks of the display will display either INSERT COIN or the current amount as appropriate.
 Exemples
 ```
