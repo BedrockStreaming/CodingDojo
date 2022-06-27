@@ -1,14 +1,17 @@
-# Vending Machine Kata aka KataCola
+# KataCola
+Inspired from [guyroyse](https://github.com/guyroyse/vending-machine-kata)
+
+## Description 
 In this exercise you will build the brains of a vending machine. It will accept money, make change, maintain inventory, and dispense products. All the things that you might expect a vending machine to accomplish.
 
-The point of this kata is to provide
+The point of this kata is to learn how to work efficiently on a same project with collaborative teams.
 
-# Features
+## Features
 In a first time, we don't care about the stock management (infinite products, infinite coin)
 
 The price are the same (0.80) for each products.
 
-This rules will evolve.
+These rules will evolve.
 
 We need to have 2 teams: 
 1st will be in charge of the coin management.
@@ -16,12 +19,10 @@ We need to have 2 teams:
 2nd will be in charge of the product management.
 
 
-## Accept Coins (1st team)
-As a vendor
-
-I want a vending machine that accepts coins
-
-So that I can collect money from the customer
+### Accept Coins (1st team)
+_As a vendor_
+_I want a vending machine that accepts coins_
+_So that I can collect money from the customer_
 
 The vending machine will accept valid coins (10, 20, 50 cents and 1 euro) and reject invalid ones (1, 2 cents and 2 euros).
 
@@ -39,12 +40,10 @@ Example 2
 $ INSERTCOIN 10, 1, 50, 10, 5
 > CREDIT 1.70 COIN-RETURN 0,05
 ```
-## Select Product (2nd team)
-As a vendor
-
-I want customers to select products
-
-So that I can give them an incentive to put money in the machine
+### Select Product (2nd team)
+_As a vendor_
+_I want customers to select products_
+_So that I can give them an incentive to put money in the machine_
 
 There are three products: cola (C) for 0.80€, sprite (S) for 0.80€, and fanta (F) for 0.80€. When the respective button is pressed and enough money has been inserted, the product is dispensed and the machine displays THANK YOU.
 
@@ -69,7 +68,7 @@ $ ORDER F
 
 ```
 
-## Stock management (2nd Team)
+### Stock management (2nd Team)
 We will have a limited amount of product (5 of each)
 In case of a product is missing, the vending machine should display something like that:
 ```
@@ -88,16 +87,16 @@ At start, the machine contains:
 
 If we can't make change, display EXACT CHANGE ONLY
 
-## New products (1st team)
+### New products (1st team)
 Add new product in the vending machine
 Water (W) price is 0.50 cents
 Mars (M) price 1 euro
 
-# HELP
+## HELP
 You can display all the available command by typing in terminal
 ```
 make help
 ```
 
-# Miscellaneous
+## Miscellaneous
 Despite the fact there is 2 teams, this is not a competition, don't hesitate to help each other ... and communicate 
