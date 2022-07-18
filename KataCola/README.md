@@ -65,7 +65,7 @@ $ ORDER C
 We need to integrate the change system.  
 Try to return less coin possible (If you need to return 20 cents, use 1 coin of 20, instead of 2 coins of 10).
 Tips: 
-Alaways try to return the max of high valuable coins.  
+Always try to return the max of high valuable coins.  
 
 If you need to return 50 cents, you should try to return in this order:  
  - 1 coin of 50 cents  
@@ -90,6 +90,7 @@ $ ORDER F
 
 ### Stock management (Team 2)
 We will have a limited amount of product (5 of each)
+you should use serializer component, already in composer (see files in utils folder)
 In case of a product is missing, the vending machine should display something like that:
 ```
 $ ORDER C
@@ -108,6 +109,9 @@ At start, the machine contains:
 If we can't make change, display EXACT CHANGE ONLY
 
 ### New products (Team 1)
+
+you should use serializer component, already in composer (see files in utils folder)
+
 Add new product in the vending machine:
 - Water (W) price is 0.50 cents with a stock of 5
 - Mars (M) price 1 euro with a stock of 5
