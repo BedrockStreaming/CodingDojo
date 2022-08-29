@@ -22,7 +22,29 @@ class InsertCoinCommand extends Command
     {
         $insertedCoins = $input->getArgument(self::COINS);
 
-        $output->writeln('Credit: ' . $insertedCoins);
+        $insertedCoins = explode(',',$insertedCoins);
+        $credit = 0;
+        $invalidCoin = 0;
+        foreach ($insertedCoins as $coin) {
+            //1euro
+            if ((int)$coin === 1) {
+                $coin = 100;
+            }
+            //2euroS
+            if ((int)$coin === 2) {
+                $coin = 200;
+            }
+
+            if ((int)$coin > 1 && (int)$coin < 10) {
+                $invalidCoin += (int)$coin;
+                $coin = 0;
+            }
+            $credit  = $credit + (int)$coin;
+        }
+
+        $formattedCoinReturn =  $invalidCoin > 0 ? ' COIN-RETURN '.number_format($invalidCoin / 100, 2): '';
+
+        $output->writeln('CREDIT: ' . number_format($credit / 100, 2) .$formattedCoinReturn);
 
         return Command::SUCCESS;
     }
