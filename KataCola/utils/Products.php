@@ -1,5 +1,7 @@
 <?php
 
+namespace BedrockStreamingUtils\CodingDojo\KataCola;
+
 class Products
 {
     public function __construct
