@@ -1,15 +1,15 @@
 -
-  - name: Coca
-    keyName: C
-    quantity: 5
-    price: 0.80
-
-  - name: Fanta
-    keyName: F
-    quantity: 5
-    price: 0.80
-
-  - name: Sprite
-    keyName: S
-    quantity: 5
-    price: 0.80
+  name: Coca
+  keyName: C
+  quantity: 5
+  price: 0.80
+-
+  name: Fanta
+  keyName: F
+  quantity: 5
+  price: 0.80
+-
+  name: Sprite
+  keyName: S
+  quantity: 5
+  price: 0.80
