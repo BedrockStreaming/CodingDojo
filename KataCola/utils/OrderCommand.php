@@ -7,16 +7,20 @@ use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
-use Symfony\Component\PropertyInfo\Extractor\ReflectionExtractor;
-use Symfony\Component\Serializer\Encoder\YamlEncoder;
-use Symfony\Component\Serializer\Normalizer\ArrayDenormalizer;
-use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
-use Symfony\Component\Serializer\Serializer;
+use Symfony\Component\Serializer\SerializerInterface;
 
 #[AsCommand(name: 'cola:order')]
 class OrderCommand extends Command
 {
     private const PRODUCT = 'selected-product';
+
+    private SerializerInterface $serializer;
+
+    public function __construct(SerializerInterface $serializer)
+    {
+        parent::__construct();
+        $this->serializer = $serializer;
+    }
 
     protected function configure(): void
     {
@@ -25,13 +29,23 @@ class OrderCommand extends Command
 
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
-        $insertedCoins = $input->getArgument(self::PRODUCT);
+        $selectedProductKeyName = $input->getArgument(self::PRODUCT);
 
-        $serializer = new Serializer([new ObjectNormalizer(null, null, null, new ReflectionExtractor())], [new YamlEncoder()]);
-        $products = $serializer->deserialize(file_get_contents('/home/orann/bedrock_projects/CodingDojo/KataCola/utils/products.yaml'), Products::class, 'yaml');
+        /* @var Products[] $products */
+        $products = $this->serializer->deserialize(
+            file_get_contents(__DIR__.'/products.yaml'),
+            Products::class . '[]',
+            'yaml'
+        );
 
-        print_r($products);
-       // $output->writeln('PRODUCT-RETURN: ' . number_format($credit / 100, 2) .$formattedCoinReturn);
+        $productName = 'Please select a valid product';
+        foreach ($products as $product) {
+            if($product->keyName === $selectedProductKeyName){
+                $productName = $product->name;
+                break;
+            }
+        }
+       $output->writeln('PRODUCT-RETURN: ' . $productName);
 
         return Command::SUCCESS;
     }
