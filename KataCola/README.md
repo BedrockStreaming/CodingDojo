@@ -27,14 +27,14 @@ _As a vendor_
 _I want a vending machine that accepts coins_  
 _So that I can collect money from the customer_
 
-The vending machine will accept valid coins (10, 20, 50 cents and 1 euro) and reject invalid ones (1, 2 cents will be ignored and 2 euros).  
+The vending machine will accept valid coins (10, 20, 50 cents and 1 euro) and reject invalid ones (1, 2 cents are not considered).  
 
 coin mapping:  
 1 -> 1euro  
 10 -> 0.10 euro  
 20 -> 0.20 euro  
 50 -> 0.50 euro  
-2 -> 2 euros (invalid coin)  
+2 -> 2 euros  
 5 -> 0.05 euro (invalid coin)
 
 When a valid coin is inserted the amount of the coin will be added to the current amount and the display will be updated.  
