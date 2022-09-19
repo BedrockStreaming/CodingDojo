@@ -55,6 +55,12 @@ class OrderCommand extends Command
             }
         }
 
+        if($product->quantity  <= 0) {
+            $output->writeln('STOCK OUT OF: ' . $productName . ' please choose another product.');
+            return Command::SUCCESS;
+        }
+
+
         $priceProduct = $product->price;
         $moneyBack = 0;
         if ($actualCredit < $priceProduct)
