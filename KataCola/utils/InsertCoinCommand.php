@@ -7,11 +7,21 @@ use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
+use Symfony\Component\Serializer\SerializerInterface;
+use Symfony\Component\Yaml\Yaml;
 
 #[AsCommand(name: 'cola:insert-coin')]
 class InsertCoinCommand extends Command
 {
     private const COINS = 'inserted-coins';
+
+    private SerializerInterface $serializer;
+
+    public function __construct(SerializerInterface $serializer)
+    {
+        parent::__construct();
+        $this->serializer = $serializer;
+    }
 
     protected function configure(): void
     {
@@ -20,6 +30,13 @@ class InsertCoinCommand extends Command
 
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
+        /* @var Credit $credit */
+        $actualCredit = $this->serializer->deserialize(
+            file_get_contents(__DIR__.'/credit.yaml'),
+            Credit::class,
+            'yaml'
+        )->credit;
+
         $insertedCoins = $input->getArgument(self::COINS);
 
         $insertedCoins = explode(',',$insertedCoins);
@@ -44,7 +61,11 @@ class InsertCoinCommand extends Command
 
         $formattedCoinReturn =  $invalidCoin > 0 ? ' COIN-RETURN '.number_format($invalidCoin / 100, 2): '';
 
-        $output->writeln('CREDIT: ' . number_format($credit / 100, 2) .$formattedCoinReturn);
+        $creditToSave = (float)($actualCredit + $credit / 100);
+        $yaml = Yaml::dump(['credit' => $creditToSave]);
+        file_put_contents(__DIR__.'/credit.yaml', $yaml);
+
+        $output->writeln('CREDIT: ' . number_format($creditToSave, 2) .$formattedCoinReturn);
 
         return Command::SUCCESS;
     }

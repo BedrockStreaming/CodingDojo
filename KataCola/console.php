@@ -13,7 +13,7 @@ use Symfony\Component\Serializer\Serializer;
 
 $application = new Application();
 
-$application->add(new InsertCoinCommand());
+$application->add(new InsertCoinCommand(new Serializer([new ObjectNormalizer()], [new YamlEncoder()])));
 $application->add(new OrderCommand(
         new Serializer([new ObjectNormalizer(), new ArrayDenormalizer()], [new YamlEncoder()])
 ));
