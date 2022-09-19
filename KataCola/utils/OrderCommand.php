@@ -55,12 +55,12 @@ class OrderCommand extends Command
             }
         }
 
-        print_r($product);
         $priceProduct = $product->price;
         $moneyBack = 0;
         if ($actualCredit < $priceProduct)
         {
             $output->writeln('trop pauvre');
+            return Command::SUCCESS;
         }
         else {
             $moneyBack = $actualCredit - $priceProduct;
@@ -71,6 +71,20 @@ class OrderCommand extends Command
         else {
             $returnCoin = '';
         }
+
+
+        $product->quantity--;
+
+
+      $orderedProduct =  [$product->name => (array)$product];
+
+        $yaml = array_replace(
+            Yaml::parse(file_get_contents(__DIR__.'/products.yaml')),
+            $orderedProduct
+        );
+
+        file_put_contents(__DIR__.'/products.yaml', Yaml::dump($yaml));
+
 
        $output->writeln('PRODUCT-RETURN: ' . $productName . $returnCoin);
 
