@@ -16,10 +16,10 @@ Sprite:
 Mars:
     name: Mars
     keyName: M
-    quantity: 5
-    price: 1
+    quantity: 2
+    price: 1.0
 Water:
     name: Water
     keyName: W
-    quantity: 5
+    quantity: 2
     price: 0.5

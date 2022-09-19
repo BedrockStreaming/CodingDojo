@@ -1,0 +1,20 @@
+10:
+  coin: 10
+  quantity: 4
+  name: 10cts
+20:
+  coin: 20
+  quantity: 4
+  name: 20cts
+50:
+  coin: 50
+  quantity: 4
+  name: 50cts
+100:
+  coin: 100
+  quantity: 4
+  name: 1euro
+200:
+  coin: 200
+  quantity: 4
+  name: 2euros

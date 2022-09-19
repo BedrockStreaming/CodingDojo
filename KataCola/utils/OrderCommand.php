@@ -39,6 +39,13 @@ class OrderCommand extends Command
             'yaml'
         );
 
+        /* @var CashFlow[] $cashFlow */
+        $cashFlow = $this->serializer->deserialize(
+            file_get_contents(__DIR__.'/cashFlow.yaml'),
+            CashFlow::class . '[]',
+            'yaml'
+        );
+
         /* @var float $actualCredit */
         $actualCredit = $this->serializer->deserialize(
             file_get_contents(__DIR__.'/credit.yaml'),
@@ -72,6 +79,23 @@ class OrderCommand extends Command
             $moneyBack = $actualCredit - $priceProduct;
         }
         if ($moneyBack > 0) {
+
+            $toto = array_reverse($cashFlow);
+            $moneyBackCent = $moneyBack*100;
+            $moneyBack ='';
+            foreach ($toto as $singleCoin) {
+                if ($singleCoin->quantity > 0) {
+                    if (($moneyBackCent / $singleCoin->coin) > 1) {
+                        $nbCoin = floor($moneyBackCent / $singleCoin->coin);
+
+                        $moneyBack .= $nbCoin .' piece(s) de ' . $singleCoin->name.'\n';
+                        $moneyBackCent = $moneyBackCent % $singleCoin->coin;
+                    }
+
+                }
+
+            }
+
             $returnCoin = ' Return -> '.$moneyBack;
         }
         else {
