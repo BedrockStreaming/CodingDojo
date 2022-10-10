@@ -13,13 +13,3 @@ Sprite:
     keyName: S
     quantity: 5
     price: 0.8
-Mars:
-    name: Mars
-    keyName: M
-    quantity: 2
-    price: 1.0
-Water:
-    name: Water
-    keyName: W
-    quantity: 2
-    price: 0.5
