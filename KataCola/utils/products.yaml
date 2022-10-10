@@ -1,0 +1,15 @@
+Cola:
+    name: Cola
+    keyName: C
+    quantity: 5
+    price: 0.8
+Fanta:
+    name: Fanta
+    keyName: F
+    quantity: 5
+    price: 0.8
+Sprite:
+    name: Sprite
+    keyName: S
+    quantity: 5
+    price: 0.8

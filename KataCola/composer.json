@@ -1,0 +1,43 @@
+{
+  "name": "bedrockstreaming/coding-dojo-kata-toto",
+  "description": "A coding dojo exercise for your team.",
+  "type": "project",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Bedrock",
+      "email": "opensource@bedrockstreaming.com",
+      "homepage": "https://tech.bedrockstreaming.com/"
+    }
+  ],
+  "config": {
+    "bin-dir": "vendor/bin",
+    "vendor-dir": "vendor",
+    "sort-packages": true
+  },
+  "require": {
+    "php": "^8.1",
+    "myclabs/php-enum": "^1.8",
+    "symfony/console": "^5.4",
+    "symfony/property-access": "^6.1",
+    "symfony/serializer": "^6.1",
+    "symfony/yaml": "^6.1"
+  },
+  "require-dev": {
+    "m6web/php-cs-fixer-config": "^2.0",
+    "phpstan/phpstan": "^1.1",
+    "phpstan/phpstan-phpunit": "^1.0",
+    "phpunit/phpunit": "^9.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "BedrockStreaming\\CodingDojo\\KataCola\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "BedrockStreamingUtils\\CodingDojo\\KataCola\\": "utils/",
+      "BedrockStreamingTest\\CodingDojo\\KataCola\\": "tests/"
+    }
+  }
+}
